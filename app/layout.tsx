@@ -5,6 +5,7 @@ import NextTopLoader from "nextjs-toploader";
 
 // ----------------- import UI
 import { Background } from "@/ui/background/Background";
+import { Header } from "@/ui/header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
+    title,
 }: {
     children: React.ReactNode;
+    title: string;
 }) {
     return (
         <html lang="pl">
@@ -34,7 +37,8 @@ export default function RootLayout({
                     zIndex={1600}
                     showAtBottom={false}
                 />
-                <Background />
+                <Header />
+                {/* <Background /> */}
                 <main className="max-w-screen-2xl mx-auto">{children}</main>
                 <div className="h-[200vh]" />
             </body>
