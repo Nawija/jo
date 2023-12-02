@@ -1,6 +1,8 @@
-export function Logo({ title }) {
+import { lusitana } from "@/ui/fonts";
+
+export function Logo({ title }: { title: string }) {
     return (
-        <div>
+        <div className="flex-c z-50 relative">
             <svg
                 width="25"
                 height="25"
@@ -15,7 +17,12 @@ export function Logo({ title }) {
                     fill="white"
                 />
             </svg>
-            <p>{title}</p>
+            <p className="text-white font-medium ml-1.5">{title}</p>
+            <p
+                className={`absolute right-0 -bottom-1.5 text-[10px] ${lusitana.className}`}
+            >
+                developer
+            </p>
         </div>
     );
 }

@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.flex-c {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-main {
+    position: relative;
+    border-radius: 12px;
+    background-color: rgb(223, 223, 223);
+    font-size: 13px;
+    font-weight: 600;
+    color: #30101f;
+}
+.btn-main:hover {
+    position: relative;
+    border-radius: 12px;
+    background-color: rgb(206, 191, 191);
+    font-size: 13px;
+    font-weight: 600;
+    color: #692243;
+}
+
+.btn-main::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    background-color: #e82fe0;
+    filter: blur(12px);
+    z-index: -1;
+}
+.btn-main::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background-color: #ed4f4f;
+    filter: blur(12px);
+    z-index: -1;
+}

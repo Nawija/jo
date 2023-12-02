@@ -25,7 +25,7 @@ export default function RootLayout({
         <html lang="pl">
             <body className={`min-h-screen w-full ${inter.className}`}>
                 <NextTopLoader
-                    color="#36a5e6"
+                    color="#a40220"
                     initialPosition={0.08}
                     crawlSpeed={200}
                     height={2.7}
@@ -33,13 +33,14 @@ export default function RootLayout({
                     showSpinner={false}
                     easing="ease"
                     speed={200}
-                    shadow="0 0 25px #3caff1,0 0 15px #2299DD"
                     zIndex={1600}
                     showAtBottom={false}
                 />
                 <Header />
-                {/* <Background /> */}
-                <main className="max-w-screen-2xl mx-auto">{children}</main>
+                <main className="max-w-screen-2xl mx-auto text-gray-200">
+                    {children}
+                </main>
+                <Background />
                 <div className="h-[200vh]" />
             </body>
         </html>
