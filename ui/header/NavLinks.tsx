@@ -20,26 +20,41 @@ const strefaKlientaLink = {
 export function NavLinksDesctop({ pathname }: { pathname: string }) {
     return (
         <div className="items-center justify-center space-x-4 text-sm hidden lg:flex">
-            {links.map((link) => (
-                <li className="list-none" key={link.label}>
-                    <Link
-                        href={link.path}
-                        className={`hover:text-white hover:bg-white/10 px-3 py-2 rounded-xl transition-colors font-medium ${
-                            pathname === link.path ? "text-white " : ""
-                        }`}
-                    >
-                        {link.label}
-                    </Link>
-                </li>
-            ))}
+
+                {links.map((link) => (
+                    <li className="list-none" key={link.label}>
+                        <Link
+                            href={link.path}
+                            className={`hover:text-white hover:bg-white/10 px-3 py-2 rounded-xl transition-colors font-medium ${
+                                pathname === link.path ? "text-white " : ""
+                            }`}
+                        >
+                            {link.label}
+                        </Link>
+                    </li>
+                ))}
+
 
             <Link
                 href={strefaKlientaLink.path}
                 className="flex items-center justify-center py-1.5 px-3 text-white"
             >
-                
-                <SecondButton>{strefaKlientaLink.label}
-                <Image priority src="/arrowLeft.svg" height={12} width={12} alt="Strzałka w lewo" />
+                <SecondButton className="py-2">
+                    {strefaKlientaLink.label}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        className="w-3 h-3 ml-1"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                        ></path>
+                    </svg>
                 </SecondButton>
             </Link>
         </div>

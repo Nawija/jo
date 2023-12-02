@@ -32,11 +32,11 @@ export function Header() {
 
     return (
         <header
-            className={`text-gray-800 sticky top-0 left-0 w-full px-5 z-[999] transition-colors duration-300 ${
+            className={`text-gray-800 sticky top-0 left-0 w-full px-3 py-1 z-[999] transition-colors duration-300 ${
                 !isScrolled ? "" : "bg-[#0b0b0b80] shadow-lg backdrop-blur-md"
             }`}
         >
-            <div className="max-w-screen-2xl lg:p-5 py-1 mx-auto flex items-center justify-between text-gray-400">
+            <div className="max-w-screen-2xl mx-auto flex items-center justify-between text-gray-400">
                 <Logo title="Seovileo" />
                 <BurgerMenu showMenu={showMenu} handleMenu={handleMenu} />
                 <NavLinksDesctop pathname={pathname} />

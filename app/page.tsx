@@ -17,12 +17,13 @@ export default function Home() {
                 </p>
                 <MainButton>Portfolio</MainButton>
             </div>
-            <div className="w-1/2 space-y-10">
+            <div className="w-1/2 h-96 space-y-10 relative overflow-hidden rounded-xl">
                 <img
-                    src="https://images.pexels.com/photos/18977904/pexels-photo-18977904/free-photo-of-kubek-zastawa-stolowa-porcelana-elegancki.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    src="https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     alt="xx"
                     height={300}
                     width={400}
+                    className="w-full h-full object-cover"
                 />
             </div>
         </div>
