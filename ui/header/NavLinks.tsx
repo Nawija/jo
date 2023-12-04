@@ -25,7 +25,7 @@ export function NavLinksDesctop({ pathname }: { pathname: string }) {
                     <li className="list-none" key={link.label}>
                         <Link
                             href={link.path}
-                            className={`hover:text-white hover:bg-white/10 px-3 py-2 rounded-xl transition-colors font-medium ${
+                            className={`hover:text-white hover:bg-white/10 px-3 py-2 rounded-xl transition-colors font-medium text-xs ${
                                 pathname === link.path ? "text-white " : ""
                             }`}
                         >
@@ -134,17 +134,17 @@ export function BurgerMenu({
             onClick={handleMenu}
         >
             <div
-                className={`h-0.5 rounded-lg bg-gray-200 transition-all ${
+                className={`h-0.5 rounded-lg bg-red-500 transition-all ${
                     showMenu ? "w-4 -rotate-45 scale-110" : "w-4 m-1"
                 }`}
             />
             <div
-                className={` h-0.5 rounded-lg bg-gray-200 transition-all ${
+                className={` h-0.5 rounded-lg bg-red-500 transition-all ${
                     showMenu ? "scale-0" : "w-3 m-1"
                 }`}
             />
             <div
-                className={` h-0.5 rounded-lg bg-gray-200 transition-all ${
+                className={` h-0.5 rounded-lg bg-red-500 transition-all ${
                     showMenu
                         ? "w-4 -translate-y-1 rotate-45 scale-110"
                         : "w-4 m-1"

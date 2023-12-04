@@ -33,11 +33,11 @@ export function Header() {
     return (
         <header
             className={`text-gray-800 sticky top-0 left-0 w-full px-3 py-1 z-[999] transition-colors duration-300 ${
-                !isScrolled ? "" : "bg-[#0b0b0b80] shadow-lg backdrop-blur-md"
+                !isScrolled ? "" : "bg-[#0b0b0b] shadow-lg"
             }`}
         >
             <div className="max-w-screen-2xl mx-auto flex items-center justify-between text-gray-400">
-                <Logo title="Seovileo" />
+                <Logo title="Jarek Olszewski" smallTitle="fotograf" />
                 <BurgerMenu showMenu={showMenu} handleMenu={handleMenu} />
                 <NavLinksDesctop pathname={pathname} />
                 <NavLinksMobile
