@@ -24,7 +24,7 @@ export default function RootLayout({
     return (
         <html lang="pl">
             <body className={`min-h-screen w-full overflow-x-hidden ${inter.className}`}>
-                <NextTopLoader
+                {/* <NextTopLoader
                     color="#a40220"
                     initialPosition={0.08}
                     crawlSpeed={200}
@@ -35,7 +35,7 @@ export default function RootLayout({
                     speed={200}
                     zIndex={1600}
                     showAtBottom={false}
-                />
+                /> */}
                 <Header />
                 <main className="max-w-screen-2xl mx-auto text-gray-200 px-2">
                     {children}

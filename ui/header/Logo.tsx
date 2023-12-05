@@ -1,4 +1,4 @@
-import { playball } from "@/ui/fonts";
+import { comfortaa } from "@/ui/fonts";
 import Link from "next/link";
 
 export function Logo({
@@ -13,7 +13,7 @@ export function Logo({
             <div className="relative -mt-1">
                 <p className="text-white font-medium ml-1.5">{title}</p>
                 <p
-                    className={`absolute right-2 -bottom-3 text-[14px] ${playball.className}`}
+                    className={`absolute right-0 -bottom-2.5 text-xs ${comfortaa.className}`}
                 >
                     {smallTitle}
                 </p>

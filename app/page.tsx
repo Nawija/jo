@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 
-import { Hero } from "@/ui/hero/hero";
+import { Hero } from "@/ui/hero/Hero";
 import { CardHomeInfo } from "@/ui/cards/CardHomeInfo";
 
 export default function Home() {

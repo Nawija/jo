@@ -6,33 +6,31 @@ import { SecondButton } from "../buttons/SecondButton";
 const links = [
     { path: "/", label: "Start" },
     { path: "/o-mnie", label: "O Mnie" },
-    { path: "/usługi", label: "Usługi" },
+    { path: "/oferta", label: "Oferta" },
     { path: "/galeria", label: "Galeria" },
     { path: "/kontakt", label: "Kontakt" },
 ];
 
 const strefaKlientaLink = {
-    path: "/darmowa-wycena",
-    label: "Darmowa Wycena",
+    path: "/strefa-klienta",
+    label: "Strefa Klienta",
 };
 
 export function NavLinksDesctop({ pathname }: { pathname: string }) {
     return (
         <div className="items-center justify-center space-x-4 text-sm hidden lg:flex">
-
-                {links.map((link) => (
-                    <li className="list-none" key={link.label}>
-                        <Link
-                            href={link.path}
-                            className={`hover:text-white hover:bg-white/10 px-3 py-2 rounded-xl transition-colors font-medium text-xs ${
-                                pathname === link.path ? "text-white " : ""
-                            }`}
-                        >
-                            {link.label}
-                        </Link>
-                    </li>
-                ))}
-
+            {links.map((link) => (
+                <li className="list-none" key={link.label}>
+                    <Link
+                        href={link.path}
+                        className={`hover:text-white hover:bg-white/10 px-3 py-2 rounded-xl transition-colors font-medium text-xs ${
+                            pathname === link.path ? "text-white " : ""
+                        }`}
+                    >
+                        {link.label}
+                    </Link>
+                </li>
+            ))}
 
             <Link
                 href={strefaKlientaLink.path}
@@ -97,21 +95,23 @@ export function NavLinksMobile({
                 onClick={handleMenu}
                 className="btn-main flex items-center justify-center py-1.5 px-3"
             >
-                {strefaKlientaLink.label}
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    className="w-3 h-3 ml-1"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                    ></path>
-                </svg>
+                <SecondButton>
+                    {strefaKlientaLink.label}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        className="w-3 h-3 ml-1"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                        ></path>
+                    </svg>
+                </SecondButton>
             </Link>
         </div>
     );
@@ -133,17 +133,17 @@ export function BurgerMenu({
             onClick={handleMenu}
         >
             <div
-                className={`h-0.5 rounded-lg bg-red-500 transition-all ${
+                className={`h-0.5 rounded-lg bg-white transition-all ${
                     showMenu ? "w-4 -rotate-45 scale-110" : "w-4 m-1"
                 }`}
             />
             <div
-                className={` h-0.5 rounded-lg bg-red-500 transition-all ${
+                className={` h-0.5 rounded-lg bg-white transition-all ${
                     showMenu ? "scale-0" : "w-3 m-1"
                 }`}
             />
             <div
-                className={` h-0.5 rounded-lg bg-red-500 transition-all ${
+                className={` h-0.5 rounded-lg bg-white transition-all ${
                     showMenu
                         ? "w-4 -translate-y-1 rotate-45 scale-110"
                         : "w-4 m-1"

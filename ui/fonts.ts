@@ -1,4 +1,10 @@
-import { Inter, Lusitana, Raleway, Playball } from "next/font/google";
+import {
+    Inter,
+    Lusitana,
+    Raleway,
+    Playball,
+    Comfortaa,
+} from "next/font/google";
 
 export const inter = Inter({ subsets: ["latin"] });
 export const lusitana = Lusitana({
@@ -10,3 +16,7 @@ export const playball = Playball({
     subsets: ["latin"],
 });
 export const raleway = Raleway({ weight: ["400", "500"], subsets: ["latin"] });
+export const comfortaa = Comfortaa({
+    weight: ["300", "400", "500"],
+    subsets: ["latin"],
+});

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import HeroImg from "@/public/images/jarek-olszewski.jpg";
 import Link from "next/link";
+import { MainButton } from "@/ui/buttons/MainButton";
 
 export default function OfertaPage() {
     const initialValues = Array(10).fill(null);
@@ -11,7 +12,10 @@ export default function OfertaPage() {
 
     const totalValue = values.reduce((acc, cur) => acc + (cur || 0), 0);
 
-    const handleRadioChange = (event, categoryIndex) => {
+    const handleRadioChange = (
+        event: React.ChangeEvent<HTMLInputElement>,
+        categoryIndex: number
+    ) => {
         const { value } = event.target;
         setValues((prevValues) => [
             ...prevValues.slice(0, categoryIndex),
@@ -20,7 +24,10 @@ export default function OfertaPage() {
         ]);
     };
 
-    const handleCheckboxChange = (event, categoryIndex) => {
+    const handleCheckboxChange = (
+        event: React.ChangeEvent<HTMLInputElement>,
+        categoryIndex: number
+    ) => {
         const { value, checked } = event.target;
         setValues((prevValues) => [
             ...prevValues.slice(0, categoryIndex),
@@ -47,11 +54,17 @@ export default function OfertaPage() {
                     />
                 </svg>
             </div>
-            <div className="w-full h-[30vh] fixed left-0 top-0 lg:top-[3.9rem] lg:-z-10">
-                <Image src={HeroImg} alt="fotograf siedlce" />
-                <div className="absolute left-1/2 lg:left-[66%] top-[73%] lg:top-[100%] text-white text-center lg:text-start lg:text-black lg:text-4xl lg:font-normal font-semibold -translate-x-1/2 -translate-y-1/2 text-lg tracking-wide">
+            <div className="w-full h-[30vh] fixed left-0 top-0 lg:top-[3.2rem] ">
+                <div className="lg:-z-10">
+                    <Image
+                        className="rounded-lg"
+                        src={HeroImg}
+                        alt="fotograf siedlce"
+                    />
+                </div>
+                <div className="absolute left-1/2 lg:left-[60%] top-[73%] lg:top-[100%] text-white text-center lg:text-start lg:text-4xl lg:font-normal font-semibold -translate-x-1/2 -translate-y-1/2 text-lg tracking-wide">
                     <p>Wypełnij Formularz</p>
-                    <p className=" lg:text-red-600 -my-1">lub</p>
+                    <p className="-my-1 lg:my-0">lub</p>
                     <p className="mb-3">Zadzwoń</p>
                     <div className="flex items-center justify-start">
                         <Link
@@ -78,7 +91,7 @@ export default function OfertaPage() {
                 </div>
             </div>
             <form
-                className="p-6 rounded-lg border bg-white shadow-xl z-20"
+                className="p-6 rounded-lg border bg-white text-black shadow-xl z-20"
                 action="https://public.herotofu.com/v1/d1061fe0-e21a-11ed-8300-fd92f9e8911a"
                 method="post"
                 accept-charset="UTF-8"
@@ -295,9 +308,9 @@ export default function OfertaPage() {
                     <p className="font-semibold text-green-700 w-max">
                         Cena: {totalValue}
                     </p>
-                    <button className="btn-main py-2 px-4">
+                    <MainButton className="btn-main py-2 px-4">
                         Wyślij Formularz
-                    </button>
+                    </MainButton>
                 </div>
             </form>
         </div>
