@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import heroImg from "@/public/images/jarek-olszewski.jpg";
@@ -9,93 +11,114 @@ import s4Img from "@/public/images/s4.jpg";
 const heroImgAlt = "Jarek Olszewski Fotograf";
 const ImgClass = "h-full w-full object-cover image-scaleAnim";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+
 export function HeroDesctop() {
     return (
-        <div className="lg:flex hidden flex-col lg:flex-row space-x-2 space-y-3 md:space-x-6 w-full items-center justify-center">
-            <div className="h-96 overflow-hidden rounded-xl ">
-                <Image
-                    loading="eager"
-                    className={ImgClass}
-                    style={{ animationDuration: "5s" }}
-                    width={300}
-                    height={500}
-                    src={s1Img}
-                    alt={heroImgAlt}
-                />
+        <Carousel swipeable={true}>
+            <div>
+                <Image height={900} width={1200} alt="xx" src={heroImg} />
+                <p className="legend">Legend 1</p>
             </div>
-            <div className="flex flex-row lg:flex-col space-x-3 lg:space-y-6 items-center justify-center">
-                <div className=" lg:w-40 h-40 overflow-hidden rounded-xl ">
-                    <Image
-                        loading="eager"
-                        className={ImgClass}
-                        style={{ animationDuration: "16s" }}
-                        width={150}
-                        height={150}
-                        src={s4Img}
-                        alt={heroImgAlt}
-                    />
-                </div>
-                <div className="w-40 h-48 overflow-hidden rounded-xl">
-                    <Image
-                        loading="eager"
-                        className={ImgClass}
-                        style={{ animationDuration: "18s" }}
-                        width={150}
-                        height={150}
-                        src={s2Img}
-                        alt={heroImgAlt}
-                    />
-                </div>
+            <div>
+                <Image height={900} width={1200} alt="xx" src={s1Img} />
+                <p className="legend">Legend 2</p>
             </div>
-            <div className="h-[26rem] w-[30rem] -z-10 flex overflow-hidden rounded-xl ">
-                <Image
-                    loading="eager"
-                    className={ImgClass}
-                    style={{ animationDuration: "8s" }}
-                    width={300}
-                    height={500}
-                    src={heroImg}
-                    alt={heroImgAlt}
-                />
+            <div>
+                <Image height={900} width={1200} alt="xx" src={s2Img} />
+                <p className="legend">Legend 3</p>
             </div>
-            <div className="flex flex-row lg:flex-col space-x-3 lg:space-y-6 items-center justify-center ">
-                <div className="w-40 h-48 flex overflow-hidden rounded-xl ">
-                    <Image
-                        loading="eager"
-                        className={ImgClass}
-                        style={{ animationDuration: "16s" }}
-                        width={300}
-                        height={500}
-                        src={s1Img}
-                        alt={heroImgAlt}
-                    />
-                </div>
-                <div className="w-40 flex overflow-hidden rounded-xl ">
-                    <Image
-                        loading="eager"
-                        className={ImgClass}
-                        style={{ animationDuration: "15s" }}
-                        width={300}
-                        height={500}
-                        src={s2Img}
-                        alt={heroImgAlt}
-                    />
-                </div>
-            </div>
-            <div className="h-96 flex overflow-hidden rounded-xl ">
-                <Image
-                    loading="eager"
-                    className={ImgClass}
-                    style={{ animationDuration: "16s" }}
-                    width={300}
-                    height={500}
-                    src={s3Img}
-                    alt={heroImgAlt}
-                />
-            </div>
-        </div>
+        </Carousel>
     );
 }
+// export function HeroDesctop() {
+//     return (
+//         <div className="lg:flex hidden flex-col lg:flex-row space-x-2 space-y-3 md:space-x-6 w-full items-center justify-center">
+//             <div className="h-96 overflow-hidden rounded-xl ">
+//                 <Image
+//                     loading="eager"
+//                     className={ImgClass}
+//                     style={{ animationDuration: "5s" }}
+//                     width={300}
+//                     height={500}
+//                     src={s1Img}
+//                     alt={heroImgAlt}
+//                 />
+//             </div>
+//             <div className="flex flex-row lg:flex-col space-x-3 lg:space-y-6 items-center justify-center">
+//                 <div className=" lg:w-40 h-40 overflow-hidden rounded-xl ">
+//                     <Image
+//                         loading="eager"
+//                         className={ImgClass}
+//                         style={{ animationDuration: "16s" }}
+//                         width={150}
+//                         height={150}
+//                         src={s4Img}
+//                         alt={heroImgAlt}
+//                     />
+//                 </div>
+//                 <div className="w-40 h-48 overflow-hidden rounded-xl">
+//                     <Image
+//                         loading="eager"
+//                         className={ImgClass}
+//                         style={{ animationDuration: "18s" }}
+//                         width={150}
+//                         height={150}
+//                         src={s2Img}
+//                         alt={heroImgAlt}
+//                     />
+//                 </div>
+//             </div>
+//             <div className="h-[26rem] w-[30rem] -z-10 flex overflow-hidden rounded-xl ">
+//                 <Image
+//                     loading="eager"
+//                     className={ImgClass}
+//                     style={{ animationDuration: "8s" }}
+//                     width={300}
+//                     height={500}
+//                     src={heroImg}
+//                     alt={heroImgAlt}
+//                 />
+//             </div>
+//             <div className="flex flex-row lg:flex-col space-x-3 lg:space-y-6 items-center justify-center ">
+//                 <div className="w-40 h-48 flex overflow-hidden rounded-xl ">
+//                     <Image
+//                         loading="eager"
+//                         className={ImgClass}
+//                         style={{ animationDuration: "16s" }}
+//                         width={300}
+//                         height={500}
+//                         src={s1Img}
+//                         alt={heroImgAlt}
+//                     />
+//                 </div>
+//                 <div className="w-40 flex overflow-hidden rounded-xl ">
+//                     <Image
+//                         loading="eager"
+//                         className={ImgClass}
+//                         style={{ animationDuration: "15s" }}
+//                         width={300}
+//                         height={500}
+//                         src={s2Img}
+//                         alt={heroImgAlt}
+//                     />
+//                 </div>
+//             </div>
+//             <div className="h-96 flex overflow-hidden rounded-xl ">
+//                 <Image
+//                     loading="eager"
+//                     className={ImgClass}
+//                     style={{ animationDuration: "16s" }}
+//                     width={300}
+//                     height={500}
+//                     src={s3Img}
+//                     alt={heroImgAlt}
+//                 />
+//             </div>
+//         </div>
+//     );
+// }
 export function HeroMobile() {
     return (
         <div className="flex lg:hidden flex-col space-x-2 space-y-3 md:space-x-6 w-full items-center justify-center overflow-hidden">
@@ -200,7 +223,7 @@ export function Hero() {
                             </h1>
                         </div>
                         <HeroDesctop />
-                        <HeroMobile />
+                        {/* <HeroMobile /> */}
                     </div>
                 </div>
             </div>
