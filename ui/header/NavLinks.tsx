@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import { SecondButton } from "../buttons/SecondButton";
-import Image from "next/image";
 
 const links = [
-    { path: "/", label: "Home" },
+    { path: "/", label: "Start" },
     { path: "/o-mnie", label: "O Mnie" },
     { path: "/usługi", label: "Usługi" },
-    { path: "/oferta", label: "Oferta" },
+    { path: "/galeria", label: "Galeria" },
     { path: "/kontakt", label: "Kontakt" },
 ];
 

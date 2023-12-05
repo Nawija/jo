@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="pl">
-            <body className={`min-h-screen w-full ${inter.className}`}>
+            <body className={`min-h-screen w-full overflow-x-hidden ${inter.className}`}>
                 <NextTopLoader
                     color="#a40220"
                     initialPosition={0.08}
