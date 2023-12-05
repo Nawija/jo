@@ -11,25 +11,38 @@ import s4Img from "@/public/images/s4.jpg";
 const heroImgAlt = "Jarek Olszewski Fotograf";
 const ImgClass = "h-full w-full object-cover image-scaleAnim";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper/modules";
 
 export function HeroDesctop() {
     return (
-        <Carousel swipeable={true}>
-            <div>
-                <Image height={900} width={1200} alt="xx" src={heroImg} />
-                <p className="legend">Legend 1</p>
-            </div>
-            <div>
-                <Image height={900} width={1200} alt="xx" src={s1Img} />
-                <p className="legend">Legend 2</p>
-            </div>
-            <div>
-                <Image height={900} width={1200} alt="xx" src={s2Img} />
-                <p className="legend">Legend 3</p>
-            </div>
-        </Carousel>
+        <Swiper
+            spaceBetween={30}
+            pagination={{
+                clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+        >
+            <SwiperSlide>
+                <Image src={heroImg} height={600} width={1200} alt="xx" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+                <Image src={s1Img} height={600} width={1200} alt="xx" />
+            </SwiperSlide>
+
+            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>Slide 4</SwiperSlide>
+            <SwiperSlide>Slide 5</SwiperSlide>
+            <SwiperSlide>Slide 6</SwiperSlide>
+        </Swiper>
     );
 }
 // export function HeroDesctop() {
@@ -214,7 +227,7 @@ export function Hero() {
                 <div className="flex flex-col items-center justify-center">
                     <div className="flex flex-col justify-center items-center space-y-3 w-full ">
                         <div className="flex flex-col md:items-start items-center justify-center  space-y-3 px-8 text-center ">
-                            <h1 className="text-3xl w-max md:text-7xl font-bold relative mb-4 lg:mb-6">
+                            <h1 className="text-3xl w-max md:text-7xl font-bold relative mb-4 lg:mb-6 bg-gradient-to-br from-white to-zinc-500 text-transparent bg-clip-text p-2">
                                 Odkryj Sztukę Fotografii
                                 <br /> Fotograf Siedlce
                                 <span className="text-base md:text-xl absolute w-max -bottom-6 right-6 font-light">
