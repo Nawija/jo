@@ -5,7 +5,7 @@ import Image from "next/image";
 import heroImg from "@/public/images/jarek-olszewski.jpg";
 import s1Img from "@/public/images/s1.jpg";
 import s2Img from "@/public/images/s2.jpg";
-import s3Img from "@/public/images/s3s.jpg";
+import s3Img from "@/public/images/s3.jpg";
 import s4Img from "@/public/images/s4.jpg";
 
 const heroImgAlt = "Jarek Olszewski Fotograf";

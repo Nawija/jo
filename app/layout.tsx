@@ -37,7 +37,7 @@ export default function RootLayout({
                     showAtBottom={false}
                 /> */}
                 <Header />
-                <main className="max-w-screen-2xl mx-auto text-gray-200 px-2">
+                <main className="max-w-screen-[2000px] mx-auto text-gray-200 lg:px-5">
                     {children}
                 </main>
                 <Background />
