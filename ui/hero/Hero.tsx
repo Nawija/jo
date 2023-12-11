@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Carousel } from "flowbite-react";
 
 import heroImg from "@/public/images/jarek-olszewski.jpg";
 import s1Img from "@/public/images/s1.jpg";
@@ -11,40 +12,18 @@ import s4Img from "@/public/images/s4.jpg";
 const heroImgAlt = "Jarek Olszewski Fotograf";
 const ImgClass = "h-full w-full object-cover image-scaleAnim";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
-import { Pagination } from "swiper/modules";
-
-export function HeroDesctop() {
+function HeroDesctop() {
     return (
-        <Swiper
-            spaceBetween={30}
-            pagination={{
-                clickable: true,
-            }}
-            modules={[Pagination]}
-            className="mySwiper"
-        >
-            <SwiperSlide>
-                <Image src={heroImg} height={600} width={1200} alt="xx" />
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <Image src={s1Img} height={600} width={1200} alt="xx" />
-            </SwiperSlide>
-
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-        </Swiper>
+        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+            <Carousel>
+                <Image src={s1Img} alt="..." height={400} width={700} />
+                <Image src={s2Img} alt="..." height={400} width={700} />
+                <Image src={s3Img} alt="..." height={400} width={700} />
+            </Carousel>
+        </div>
     );
 }
+
 // export function HeroDesctop() {
 //     return (
 //         <div className="lg:flex hidden flex-col lg:flex-row space-x-2 space-y-3 md:space-x-6 w-full items-center justify-center">
@@ -235,7 +214,10 @@ export function Hero() {
                                 </span>
                             </h1>
                         </div>
-                        <HeroDesctop />
+                        <div className="w-full h-96 absolute top-[70%] left-0">
+                            <img src="https://cdn.pixabay.com/photo/2014/02/02/17/40/photographs-256888_1280.jpg" className="w-full h-full object-cover" />
+                        </div>
+                        {/* <HeroDesctop /> */}
                         {/* <HeroMobile /> */}
                     </div>
                 </div>

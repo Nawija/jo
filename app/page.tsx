@@ -1,49 +1,49 @@
-import Link from "next/link";
+"use client";
 
+import Link from "next/link";
+import { Carousel } from "flowbite-react";
 
 import { Hero } from "@/ui/hero/Hero";
 import { CardHomeInfo } from "@/ui/cards/CardHomeInfo";
 
 export default function Home() {
-
-
     return (
-        <>
+        <div className="anim-opacity">
             <Hero />
-                <div className="flex flex-wrap -m-4 container px-5 lg:px-12 py-24 mx-auto">
-                    <CardHomeInfo
-                        href="/"
-                        title="Fotografia Ślubna"
-                        desc="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century"
-                        linkTitle="Go somewhere"
-                    />
-                    <CardHomeInfo
-                        href="/"
-                        title="Sesje Zdjęciowe"
-                        desc="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century"
-                        linkTitle="Go somewhere"
-                    />
-                    <CardHomeInfo
-                        href="/"
-                        title="Reportaż z Chrztu"
-                        desc="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century"
-                        linkTitle="Go somewhere"
-                    />
-                </div>
+            <div className="flex flex-wrap -m-4 container px-5 lg:px-12 py-24 mx-auto">
+                <CardHomeInfo
+                    href="/"
+                    title="Fotografia Ślubna"
+                    desc="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century"
+                    linkTitle="Go somewhere"
+                />
+                <CardHomeInfo
+                    href="/"
+                    title="Sesje Zdjęciowe"
+                    desc="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century"
+                    linkTitle="Go somewhere"
+                />
+                <CardHomeInfo
+                    href="/"
+                    title="Reportaż z Chrztu"
+                    desc="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century"
+                    linkTitle="Go somewhere"
+                />
+            </div>
 
             <section className="py-6 sm:py-8 lg:py-12">
                 <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-                    <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl xl:mb-12">
+                    <h2 className="mb-4 text-center text-2xl font-bold text-white/80 md:mb-8 lg:text-3xl xl:mb-12">
                         Pick your plan
                     </h2>
                     <div className="mb-6 grid gap-x-6 gap-y-12 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 lg:gap-x-8">
                         <div className="flex flex-col space-y-4">
                             <div className="flex flex-col gap-4 rounded-lg border p-4 pt-6">
-                                <h3 className="text-center text-2xl font-semibold text-gray-800">
+                                <h3 className="text-center text-2xl font-semibold text-white/80">
                                     Free
                                 </h3>
                                 <div className="flex items-end justify-center gap-1">
-                                    <span className="text-4xl font-bold text-gray-800">
+                                    <span className="text-4xl font-bold text-white/80">
                                         $0
                                     </span>
                                     <span className="text-gray-600">
@@ -155,11 +155,11 @@ export default function Home() {
                                         POPULARNE
                                     </span>
                                 </div>
-                                <h3 className="text-center text-2xl font-semibold text-gray-800">
+                                <h3 className="text-center text-2xl font-semibold text-white/80">
                                     Team
                                 </h3>
                                 <div className="flex items-end justify-center gap-1">
-                                    <span className="text-4xl font-bold text-gray-800">
+                                    <span className="text-4xl font-bold text-white/80">
                                         $19
                                     </span>
                                     <span className="text-gray-600">
@@ -288,11 +288,11 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col space-y-4">
                             <div className="flex flex-col gap-4 rounded-lg border p-4 pt-6">
-                                <h3 className="text-center text-2xl font-semibold text-gray-800">
+                                <h3 className="text-center text-2xl font-semibold text-white/80">
                                     Enterprise
                                 </h3>
                                 <div className="flex items-end justify-center gap-1">
-                                    <span className="text-4xl font-bold text-gray-800">
+                                    <span className="text-4xl font-bold text-white/80">
                                         $49
                                     </span>
                                     <span className="text-gray-600">
@@ -314,7 +314,7 @@ export default function Home() {
                                         ></path>
                                     </svg>
                                 </div>
-                                <a className="block rounded-lg bg-gray-800 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-red-600 transition duration-100 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base">
+                                <a className="block rounded-lg bg-white/80 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-red-600 transition duration-100 hover:bg-gray-700 focus-visible:ring active:bg-gray-600 md:text-base">
                                     Select Enterprise
                                 </a>
                             </div>
@@ -419,6 +419,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 }

@@ -11,8 +11,8 @@ import s4img from "@/public/images/s4.jpg";
 export default function Galeria() {
     return (
         <>
-            <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4 text-sm">
-                <div className="after:content relative mb-5 flex h-[300px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/10 px-6 pb-20 pt-64 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight lg:pt-0">
+            <div className="anim-opacity columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4 text-sm">
+                <div className="after:content relative mb-5 flex h-[600px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/10 px-6 pb-20 pt-64 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight lg:pt-0">
                     <div className="absolute inset-0 flex items-center justify-center opacity-20">
                         <span className="flex max-h-full max-w-full items-center justify-center">
                             <Bridge />
